@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      header,
+      nav {
+        /* canh giữa cách lề mỗi bên 10% */
+        margin: 5px 10%;
+      }
+      nav {
+        background: white; /*tô màu cho menu cha*/
+        border-radius: 5px; /* bo góc */
+      }
+      nav ul {
+        display: flex;
+      }
+      nav > ul li {
+        list-style: none;
+      }
+      nav > ul li a {
+        display: block;
+        padding: 0 25px;
+        line-height: 50px;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      nav ul li:first-child {
+        border-left: none; /* bỏ đường kè trái của phần tử đầu tiên */
+      }
+      nav > ul li:first-child a {
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+      }
+      /* Khi hover đến li, tô màu cho thẻ a */
+      nav ul li:hover > a {
+        background-color: orange;
+        opacity: 0.7;
+        color: white;
+      }
+      /*menu con*/
+      /*Ẩn các menu con cấp 1,2,3*/
+      nav li ul {
+        display: none;
+        min-width: 350px;
+        position: absolute;
+      }
+      nav li > ul li {
+        width: 100%;
+        border: none;
+        background: white;
+        text-align: left;
+      }
+      nav li > ul li:first-child a {
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+      }
+      nav li > ul li:last-child {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      nav li > ul li:last-child a {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      /*khi hover thì hiện menu con*/
+      nav li:hover > ul {
+        display: block;
+      }
+      /*Hiển thị menu con cấp 2,3,4 bên cạnh phải*/
+      nav > ul li > ul li > ul {
+        margin-left: 352px;
+        margin-top: -50px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#" title="Trang chủ">HOME</a></li>
+        <li>
+          <a href="#" title="Giới thiệu">ACC LIÊN MINH</a>
+          <!--Cấp 1-->
+          <ul>
+            <li>
+              <a href="#">ACC THEO GIÁ</a>
+              <!--Cấp 2-->
+              <ul>
+                <li><a href="#">ACC TRÊN 500K</a></li>
+                <li><a href="#">ACC 500K</a></li>
+                <li><a href="#">ACC DƯỚI 500K</a></li>
+              </ul>
+                <li><a href="#">ACC THEO RANK</a>
+                <!--Cấp 2-->
+                    <ul>
+                        <li><a href="#">ACC TRÊN BẠCH KIM</a></li>
+                        <li><a href="#">ACC BẠCH KIM</a></li>
+                        <li><a href="#">ACC DƯỚI BẠCH KIM</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">ACC SALE</a>
+                    <!--Cấp 2-->
+                    <ul>
+                        <li><a href="#">ACC SALE 40%</a></li>
+                        <li><a href="#">ACC SALE 50%</a></li>
+                        <li><a href="#">ACC SALE 60%</a></li>
+                    </ul>
+                </li>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" title="Giới thiệu">ACC LIÊN QUÂN</a>
+          <!--Cấp 1-->
+          <ul>
+            <li>
+              <a href="#">ACC THEO GIÁ</a>
+              <!--Cấp 2-->
+              <ul>
+                <li><a href="#">ACC TRÊN 500K</a></li>
+                <li><a href="#">ACC 500K</a></li>
+                <li><a href="#">ACC DƯỚI 500K</a></li>
+              </ul>
+                <li><a href="#">ACC THEO RANK</a>
+                <!--Cấp 2-->
+                    <ul>
+                        <li><a href="#">ACC TRÊN BẠCH KIM</a></li>
+                        <li><a href="#">ACC BẠCH KIM</a></li>
+                        <li><a href="#">ACC DƯỚI BẠCH KIM</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">ACC SALE</a>
+                    <!--Cấp 2-->
+                    <ul>
+                        <li><a href="#">ACC SALE 40%</a></li>
+                        <li><a href="#">ACC SALE 50%</a></li>
+                        <li><a href="#">ACC SALE 60%</a></li>
+                    </ul>
+                </li>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" title="Giới thiệu">ACC LIÊN MINH TỐC CHIẾN</a>
+          <!--Cấp 1-->
+          <ul>
+            <li>
+              <a href="#">ACC THEO GIÁ</a>
+              <!--Cấp 2-->
+              <ul>
+                <li><a href="#">ACC TRÊN 500K</a></li>
+                <li><a href="#">ACC 500K</a></li>
+                <li><a href="#">ACC DƯỚI 500K</a></li>
+              </ul>
+                <li><a href="#">ACC THEO RANK</a>
+                <!--Cấp 2-->
+                    <ul>
+                        <li><a href="#">ACC TRÊN BẠCH KIM</a></li>
+                        <li><a href="#">ACC BẠCH KIM</a></li>
+                        <li><a href="#">ACC DƯỚI BẠCH KIM</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">ACC SALE</a>
+                    <!--Cấp 2-->
+                    <ul>
+                        <li><a href="#">ACC SALE 40%</a></li>
+                        <li><a href="#">ACC SALE 50%</a></li>
+                        <li><a href="#">ACC SALE 60%</a></li>
+                    </ul>
+                </li>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">VỀ CHÚNG TÔI</a></li>
+        <li><a href="#">LIÊN HỆ</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

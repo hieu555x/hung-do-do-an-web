@@ -1,0 +1,104 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+}
+.container {
+  width: 100%;
+}
+.top-sidebar {
+  background-color: #292b33;
+  color: white;
+  box-sizing: border-box;
+  height: 45px;
+}
+.top-sidebar p {
+  line-height: 45px;
+  margin-left: 2%;
+}
+.top-sidebar a {
+  text-decoration: none;
+}
+.logo img {
+  object-fit: fill;
+}
+.sidebar {
+  height: 360px;
+}
+/*Dropdown menu*/
+header,
+nav {
+  /* canh giữa cách lề mỗi bên 10% */
+  margin-top: 2%;
+}
+nav {
+  background: white; /*tô màu cho menu cha*/
+  border-radius: 5px; /* bo góc */
+}
+nav ul {
+  display: flex;
+}
+nav > ul li {
+  list-style: none;
+}
+nav > ul li a {
+  display: block;
+  padding: 0 25px;
+  line-height: 50px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav ul li:first-child {
+  border-left: none; /* bỏ đường kè trái của phần tử đầu tiên */
+}
+nav > ul li:first-child a {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+/* Khi hover đến li, tô màu cho thẻ a */
+nav ul li:hover > a {
+  background-color: #f37320;
+  color: white;
+  text-decoration: none;
+}
+/*menu con*/
+/*Ẩn các menu con cấp 1,2,3*/
+nav li ul {
+  display: none;
+  min-width: 350px;
+  position: absolute;
+}
+nav li > ul li {
+  width: 100%;
+  border: none;
+  background: white;
+  text-align: left;
+}
+nav li > ul li:first-child a {
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
+nav li > ul li:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+nav li > ul li:last-child a {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+/*khi hover thì hiện menu con*/
+nav li:hover > ul {
+  display: block;
+}
+/*Hiển thị menu con cấp 2,3,4 bên cạnh phải*/
+nav > ul li > ul li > ul {
+  margin-left: 352px;
+  margin-top: -50px;
+}
+
+/*Slider*/
